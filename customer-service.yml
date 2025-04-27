@@ -1,1 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: customer-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/customerdb
+
+logging:
+  level:
+    org.springframework: INFO
+    com.bank.customer: DEBUG
 
