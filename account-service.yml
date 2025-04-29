@@ -3,7 +3,7 @@ server:
   
 spring:
   application:
-    name: customer-service
+    name: account-service
   data:
     mongodb:
       host: localhost
