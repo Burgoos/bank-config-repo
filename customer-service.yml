@@ -10,7 +10,19 @@ spring:
       port: 27017
       database: customer-service
       authentication-database: admin
+# Configuración de logs
 logging:
   level:
-    org.springframework: INFO
-    com.bank.customer: DEBUG
+    com.bankapp: DEBUG
+    org.springframework.data.mongodb: INFO
+    org.springframework.web: INFO
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,refresh
+  endpoint:
+    health:
+      show-details: always
