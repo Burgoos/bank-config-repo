@@ -1,1 +1,28 @@
+server:
+  port: 8083
 
+spring:
+  application:
+    name: transaction-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: transaction-service
+      authentication-database: admin
+# Configuración de logs
+logging:
+  level:
+    com.bankapp: DEBUG
+    org.springframework.data.mongodb: INFO
+    org.springframework.web: INFO
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,refresh
+  endpoint:
+    health:
+      show-details: always
