@@ -10,6 +10,11 @@ spring:
       port: 27017
       database: transaction-service
       authentication-database: admin
+# Endpoints para account-service
+services:
+  account-service:
+    url: http://localhost:8082
+    
 # Configuración de logs
 logging:
   level:
